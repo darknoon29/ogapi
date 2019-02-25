@@ -11,22 +11,27 @@
 |
 */
 
-use OGetIt;
+use OGetIt\OGetIt;
 
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/combatreport/{id}', function ($id) use ($router) {
+$router->get('/bonjour/{name}', function ($name) use ($router) {
+    return "Bonjour " . $name;
+});
 
-    $uni = 140;
-    $lang = fr;
-    $apikey = '';
+
+$router->get('/combatreport/{id}', function ($id) {
+
+    $uni = '801';
+    $lang = 'en';
+    $apikey = config('app.ogame_api_key');;
 
     $ogetit = new OGetIt($uni, $lang, $apikey);
 
-//Get Combat report
+    //Get Combat report
     $cr = $ogetit->getCombatReport($id);
-    return $cr;
+    return response()->json($cr);
 
 });
