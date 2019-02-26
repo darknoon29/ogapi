@@ -26,12 +26,12 @@ $router->get('/combatreport/{id}', function ($id) {
 
     $uni = '801';
     $lang = 'en';
-    $apikey = config('app.ogame_api_key');;
-
+    $apikey = env('OGAME_API_KEY', 'xxxxxxxxx');
     $ogetit = new OGetIt($uni, $lang, $apikey);
 
     //Get Combat report
     $cr = $ogetit->getCombatReport($id);
+
     return response()->json($cr);
 
 });
