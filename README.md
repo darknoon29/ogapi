@@ -1,20 +1,20 @@
-# ogapi
+# OGApi
 
-OGapi is a tool that provides an API access to the game content using a token provided by staff team.
+OGApi is a tool that provides an API access to the game content using a token provided by staff team.
 
-The tool is ased on Lumen Framework and the Ogetit Library.
+The tool is based on Laravel Lumen Framework and the Ogetit Library.
 
 Some examples :
 
-##Get Spy Report:
+## Get Spy Report:
 
 http://localhost/spyreport/sr-en-801-0ab96da7462cf2f9ab485841f9cef600909173b0
 
-##Get Combat Report:
+## Get Combat Report:
 
 http://localhost/combatreport/cr-en-801-0ab96da7462cf2f9ab485841f9cef89f909173b0
 
-##Get Harvest Report:
+## Get Harvest Report:
 
 http://localhost/harvestreport/hr-en-801-0ab96da7462cf2f9ab485841f9cef6bf709173b0
 
@@ -28,3 +28,4 @@ The universe and the country is found by parsing the id.
  
 * Caching queries
 * UI ?
+* DDOS Protection
